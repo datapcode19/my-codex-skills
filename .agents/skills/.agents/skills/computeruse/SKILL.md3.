@@ -1,0 +1,23 @@
+---
+name: computer-use
+description: Automate authorized browser UI tasks using Playwright where supported, with user confirmation for consequential actions.
+Computer Use
+Use this skill when the user asks to automate clicks, typing, scrolling, screenshots, or other browser UI steps.
+Capability check
+Determine the operating system and whether a browser automation tool, Playwright, and a graphical/browser runtime are actually available.
+Distinguish a remote Codex sandbox from the user's local Windows desktop. Never claim direct access to the user's mouse, keyboard, or screen unless an authorized local runtime exists.
+If Playwright is unavailable, explain the prerequisite and ask permission before installing dependencies or changing the environment.
+Browser workflow
+Confirm the target site and the user's desired outcome.
+Navigate using an authorized browser context.
+Prefer stable accessibility locators (role, label, text) over brittle CSS selectors.
+Wait for elements and verify page state before and after each meaningful action.
+Capture screenshots or logs to diagnose failures, avoiding sensitive content.
+Save outputs in the workspace and summarize exactly what completed and what did not.
+Require explicit user approval before purchases, submissions, deletions, account changes, or other consequential actions.
+Guardrails
+Only automate accounts, websites, and data the user is authorized to access.
+Respect website terms and rate limits; do not bypass CAPTCHAs, paywalls, or anti-bot controls.
+Never expose passwords, cookies, session tokens, or private data in logs.
+Browser automation does not imply control of the user's Windows desktop.
+If an action fails, report the error rather than claiming success.
