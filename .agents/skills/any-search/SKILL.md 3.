@@ -1,0 +1,19 @@
+---
+name: any-search
+description: Research public web pages, verify information from multiple sources, and produce cited summaries or structured research outputs.
+Any Search
+Use this skill when the user requests research on public websites or information gathering.
+Workflow
+Clarify the research question, output format, and relevant time period when necessary.
+Check which web/search tools and network access are actually available in the current environment. Never claim a tool exists without testing it.
+Search using available authorized tools. If no search tool is available, use permitted HTTP requests to public pages when supported; otherwise explain the limitation.
+Read primary sources where possible and cross-check important claims.
+Record the title, URL, publication/update date if available, and access date for each source.
+Return a concise synthesis with source URLs and uncertainty clearly marked.
+If requested, export findings as Markdown, CSV, or JSON, preserving attribution.
+Guardrails
+Respect website terms, robots instructions, licensing, authentication and rate limits.
+Do not bypass CAPTCHAs, paywalls, access controls, or anti-bot protections.
+Do not collect sensitive personal information or bulk-copy restricted copyrighted content.
+If access is blocked, stop and suggest permitted APIs, licensed datasets, or permission from the site owner.
+Never invent sources, search results, or tool capabilities.
